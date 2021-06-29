@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
 }
-
-// .Tab-menu {
-//  background-color: #181818;
-// }
-
+// TABS.jsx
+.Channel-img{
+  border-radius: 50%;
+}
 .Tabs {
   background-color: #181818;
   color: #AAA;
@@ -28,3 +27,26 @@
 
   }
 }
+
+// TABS2.JSX
+// .Channel-img{
+//   border-radius: 50%;
+// }
+// .Tabs {
+//   background-color: #181818;
+//   height: 47px;
+//   box-sizing: border-box;
+//   display: flex;
+//   align-items: center;
+//   .Tab{
+//     background-color: #181818;
+//     border: none;
+//     color: #AAA;
+//     padding: 14px 32px;
+//     &:hover{
+//       color:#FFF;
+//       // border-bottom: 3px solid #FFF
+//     }
+
+//   }
+// }

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
-import './index.scss';
 
+import { useHistory, useParams } from 'react-router-dom';
+// import './index.scss';
+//Tab material UI.
 // export default function TabMenu(props) {
 //   let { tab } = useParams();
 //   let history = useHistory();
@@ -39,20 +40,22 @@ import './index.scss';
 // }
 export default function Tabs(props) {
   const { tab } = useParams();
-
+  // let query = new URLSearchParams(useLocation().search).get("tab");
   let tabNameToIndex = {
     home: 0,
     videos: 1,
     playlists: 2, 
   } 
   const tabName = ['home', 'videos', 'playlists'];
-
   const [selectedTab, setSelectedTab] = useState(
     tabNameToIndex[tab] ? tabNameToIndex[tab] : 0 
+    // tabNameToIndex[query] ? tabNameToIndex[query] : 0
     );
- 
   return (
     <>  
+      <div className="Channel-profile">
+        <img className="Channel-img" src = "http://dummyimage.com/80x80.png/5fa2dd/ffffff"/>
+      </div>
       <div className='Tabs'>
         {tabName.map((item,index) => 
           <Tab 
@@ -65,9 +68,9 @@ export default function Tabs(props) {
         )}
 
       </div>
-      {selectedTab === 1 ?  <Videos /> 
-      : selectedTab === 2 ?  <Playlists /> 
-      : <Home />  }         
+      {selectedTab === 0 && <Home />}         
+      {selectedTab === 1 && <Videos />}
+      {selectedTab === 2 && <Playlists /> }
     </>
   );
 }
