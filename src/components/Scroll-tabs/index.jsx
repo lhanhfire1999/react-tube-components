@@ -15,15 +15,15 @@ export default function ScrollTabs(){
     ref.current.scrollLeft += scrollOffset;
     let {scrollLeft, scrollWidth, clientWidth} = ref.current;
     let scrollMaxWidth = scrollWidth-clientWidth;
-    if(!scrollLeft){
-      setPreviousBtnHide(true);
-    }
-    else if(scrollLeft < scrollMaxWidth){
+    if(scrollLeft < scrollMaxWidth){
       setPreviousBtnHide(false);
       setNextBtnHide(false);
     }
-    else if(scrollLeft === scrollMaxWidth){
+    if(scrollLeft === scrollMaxWidth){
       setNextBtnHide(true);
+    }
+    if(!scrollLeft){
+      setPreviousBtnHide(true);
     }
   };
 

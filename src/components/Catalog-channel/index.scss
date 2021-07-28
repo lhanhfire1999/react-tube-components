@@ -1,0 +1,42 @@
+.ex4{
+  button{
+    font-size: 14px;
+    border: none;
+    text-decoration: none;
+    background-color: #EEE;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  .title{
+    padding: 15px 0;
+  }
+  .containers{
+    display: flex;
+    flex-wrap: wrap;
+    .box{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      width: 189px;
+      height: 210px;
+      .avatar {
+        img{
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+      .title-channel{
+        cursor: pointer;
+        margin: 4px 0;
+      }
+    }
+  }
+  .btn-load-more{
+    display: flex;
+    justify-content: center;
+    button{
+      font-size: 20px;
+    }
+  }
+}
